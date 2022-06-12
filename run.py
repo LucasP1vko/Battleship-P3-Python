@@ -71,7 +71,10 @@ class Board:
 
                 )
         else:
-            print(f"\n Your shot at {col.upper()} {row} was missed")
+            print(
+                f"\n Your shot at {col.upper()} {row} was missed.."
+                f"Computer still have {self.ship_count} ships left "
+)
             self.board[int(row)][col_num] = "O"
     
 
@@ -93,6 +96,12 @@ class Board:
                     f"{self.board[0][col].upper()} {row}!\n"
                     f"You have {self.ship_count} ships left.."
                 )
+            elif self.ship_count == 1:
+                print(
+                    f"\nComputer shot your ship at "
+                    f"{self.board[0][col].upper()} {row}!\n"
+                    f"You have last ship left.."
+                )
 
             else:
                 print(
@@ -103,6 +112,8 @@ class Board:
             print(
                 "\n Computer shot at "
                 f"{self.board[0][col].upper()} {row} was missed.."
+                f"You have {self.ship_count} ships left.."
+
             )
             self.board[row][col] = "O"
 
@@ -203,7 +214,7 @@ def game_over():
         "|  _ \| ____|  ___| ____|  / \|_   _|\n"
         "| | | |  _| | |_  |  _|   / _ \ | |  \n"
         "| |_| | |___|  _| | |___ / ___ \| |  \n"
-        "|____/|_____|_|   |_____/_/   \_\_|  )\n"
+        "|____/|_____|_|   |_____/_/   \_\_|  \n"
         "\nGame lost.. Computer shot all of your ships.\n")
 
 
@@ -227,5 +238,25 @@ while game_on:
     start_game()
     game_over()
 
-    game_on = False
+    retry_yn = False
+    while retry_yn is False:
+        y_n = input(
+            "\nWould you like to play another game? "
+            "Please answer Yes or No:"
+        )
+        if y_n.lower().strip() == "yes":
+            retry_yn = True
+        elif y_n.lower().strip() == "y":
+            retry_yn = True
+        elif y_n.lower().strip() == "no":
+            game_on = False    
+            retry_yn = True
+        elif y_n.lower().strip() == "n":
+            game_on = False    
+            retry_yn = True
+        else:
+            print("##########\n"
+            "Wrong input.\n"
+            "Please answer YES or NO.\n")
+
 
