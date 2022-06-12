@@ -132,7 +132,7 @@ def player_turn():
                 "\n#########\n"
                 "Wrong input.\n"
                 "Your input should look like this --> A 1\n"
-                "Letter, space and a number.\n"
+                "Column letter, space and a row number.\n"
                 "Please try again..\n\n"
             )
             continue
@@ -141,7 +141,7 @@ def player_turn():
                 "\n#########\n"
                 "Wrong input.\n"
                 "Your input should look like this --> A 1\n"
-                "Letter, space and a number.\n"
+                "Column letter, space and a row number.\n"
                 "Please try again..\n\n"
             )
             continue
@@ -149,7 +149,11 @@ def player_turn():
             try:
                 a, b = coordinates.split()
                 a_num = computer_board.column_number(a)
-                if (
+                if (int(b) > 5):
+                    print(f"\n\n#########\nWrong input..\nYour typed row coordinate is > {int(b)} <.\nThere is only 5 rows. \nPlease try again:\n")
+                elif (int(b) < 1):
+                    print(f"\n#########\nWrong input..\nRow number {int(b)} doesn't exist on board. \nPlease try again:\n")
+                elif (
                     computer_board.board[int(b)][a_num] == "X" or
                     computer_board.board[int(b)][a_num] == "O"
                 ):
