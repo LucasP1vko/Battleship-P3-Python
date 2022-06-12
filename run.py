@@ -1,4 +1,7 @@
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
 
 class Board:
@@ -202,7 +205,7 @@ def start_game():
 
 def game_over():
     if computer_board.ship_count == 0:
-        print("\n__     _____ ____ _____ ___  ______   __\n"
+        print(Back.RED + "\n__     _____ ____ _____ ___  ______   __\n"
         "\ \   / /_ _/ ___|_   _/ _ \|  _ \ \ / /\n"
         " \ \ / / | | |     | || | | | |_) \ V / \n"
         "  \ V /  | | |___  | || |_| |  _ < | |  \n"
@@ -210,24 +213,25 @@ def game_over():
         "You won the game! Well done!\n")
 
     elif player_board.ship_count == 0:
-        print(" ____  _____ _____ _____    _  _____ \n"
+        cprint(" ____  _____ _____ _____    _  _____ \n"
         "|  _ \| ____|  ___| ____|  / \|_   _|\n"
         "| | | |  _| | |_  |  _|   / _ \ | |  \n"
         "| |_| | |___|  _| | |___ / ___ \| |  \n"
         "|____/|_____|_|   |_____/_/   \_\_|  \n"
-        "\nGame lost.. Computer shot all of your ships.\n")
+        "\nGame lost.. Computer shot all of your ships.\n", 'red', attrs=['bold'], file=sys.stderr)
 
 
 game_on = True
 while game_on:
-        
-    player_name = input(
-        " ____    _  _____ _____ _     _____ ____  _   _ ___ ____  \n"
+
+    print(Fore.WHITE + Back.BLUE + Style.DIM +
+        " ____    _  _____ _____ _     _____ ____  _   _ ___ ____  author: Lucas P.\n"
         "| __ )  / \|_   _|_   _| |   | ____/ ___|| | | |_ _|  _ \ \n"
         "|  _ \ / _ \ | |   | | | |   |  _| \___ \| |_| || || |_) |\n"
         "| |_) / ___ \| |   | | | |___| |___ ___) |  _  || ||  __/ \n"
-        "|____/_/   \_\_|   |_| |_____|_____|____/|_| |_|___|_|    \n \n"
-        "Welcome in Battleship game!\n\nWhat is your name?\nPlease type here:\n\n")
+        "|____/_/   \_\_|   |_| |_____|_____|____/|_| |_|___|_|    \n")        
+    player_name = input(
+        "\nWelcome in Battleship game!\n\nWhat is your name?\nPlease type here:\n\n")
     player_board = Board(player_name)
     place_ships()
     
