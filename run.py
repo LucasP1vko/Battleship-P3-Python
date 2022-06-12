@@ -26,7 +26,8 @@ class Board:
         return self.board[0].index(col.upper())
 
     def display_board(self):
-        print(Fore.CYAN +
+        print(
+            Fore.CYAN +
             "------------------------------------\n"
             f"          {self.name}'s board:\n"
             "------------------------------------")
@@ -61,7 +62,6 @@ class Board:
                 x += 1
         return coordinate_list
 
-    
     def guess_computer_ships(self, col, row, coor_list):
 
         col_num = self.column_number(col)
@@ -71,22 +71,18 @@ class Board:
             coor_list.remove(coords)
             self.ship_count -= 1
             if self.ship_count > 1:
-                print(Fore.YELLOW +
-                    f"\nYour shot at {col.upper()} {row} was a hit.\n"
-                    f"Computer still have {self.ship_count} ships left "
-
-                )
+                print(
+                    Fore.YELLOW +
+                    f"\nYour shot at {col.upper()} {row} was a hit. "
+                    f"Computer still have {self.ship_count} ships left ")
         else:
-            print(Fore.YELLOW +
-                f"\nYour shot at {col.upper()} {row} was missed..\n"
-                f"Computer still have {self.ship_count} ships left "
-)
+            print(
+                Fore.YELLOW +
+                f"\nYour shot at {col.upper()} {row} was missed.. "
+                f"Computer still have {self.ship_count} ships left ")
             self.board[int(row)][col_num] = "O"
-    
-
 
     def guess_player_ships(self, player_name):
-
         i = len(self.coordinates_list)
         rand_index = random.randrange(i)
         rand_coordinate = self.coordinates_list[rand_index]
@@ -97,36 +93,32 @@ class Board:
             self.board[row][col] = "X"
             self.ship_count -= 1
             if self.ship_count > 1:
-                print(Fore.YELLOW +
+                print(
+                    Fore.YELLOW +
                     f"\nComputer shot your ship at "
                     f"{self.board[0][col].upper()} {row}!\n"
-                    f"You have {self.ship_count} ships left.."
-                )
+                    f"You have {self.ship_count} ships left..")
             elif self.ship_count == 1:
-                print(Fore.YELLOW +
+                print(
+                    Fore.YELLOW +
                     f"\nComputer shot your ship at "
                     f"{self.board[0][col].upper()} {row}!\n"
-                    f"You have last ship left.."
-                )
-
+                    f"You have last ship left..")
             else:
-                print(Fore.YELLOW +
+                print(
+                    Fore.YELLOW +
                     f"\nComputer shot your last ship at "
-                    f"{self.board[0][col].upper()} {row}!\n"
-                )
+                    f"{self.board[0][col].upper()} {row}!\n")
         else:
-            print(Fore.YELLOW +
+            print(
+                Fore.YELLOW +
                 "\n Computer shot at "
                 f"{self.board[0][col].upper()} {row} was missed.."
-                f"You have {self.ship_count} ships left.."
-
-            )
+                f"You have {self.ship_count} ships left..")
             self.board[row][col] = "O"
 
 
-
-
-def place_ships():        
+def place_ships():
     coordinates = player_board.create_five_random_coordinates()
     for coor in coordinates:
         a, b = coor
@@ -134,63 +126,71 @@ def place_ships():
     player_board.display_board()
 
 
-
 def player_turn():
     shot = True
     while shot:
-        coordinates = input(Fore.GREEN +
-            "To make shot type: \n"
-            "letter for column (A-E) and number for row (1-5) divided by a space\n"
+        coordinates = input(
+            Fore.GREEN +
+            "To make shot type coordinates: \n"
+            "Letter for column (A-E) + "
+            "number for row (1-5) "
+            "divided by a space\n"
             "Example: A 1\n"
-            "Please type here:\n"
-        )
+            "Please type here:\n")
         if len(coordinates) > 3:
-            print(Fore.RED +
+            print(
+                Fore.RED +
                 "\n#########\n"
                 "Wrong input.\n"
                 "Your input should look like this --> A 1\n"
                 "Column letter, space and a row number.\n"
-                "Please try again..\n\n"
-            )
+                "Please try again..\n\n")
             continue
         elif len(coordinates) < 3:
-            print(Fore.RED +
+            print(
+                Fore.RED +
                 "\n#########\n"
                 "Wrong input.\n"
                 "Your input should look like this --> A 1\n"
                 "Column letter, space and a row number.\n"
-                "Please try again..\n\n"
-            )
+                "Please try again..\n\n")
             continue
         else:
             try:
                 a, b = coordinates.split()
                 a_num = computer_board.column_number(a)
                 if (int(b) > 5):
-                    print(Fore.RED +
-                        f"\n\n#########\nWrong input..\nYour typed row coordinate is > {int(b)} <.\nThere is only 5 rows. \nPlease try again:\n")
+                    print(
+                        Fore.RED +
+                        "\n\n#########\nWrong input..\n"
+                        f"Your typed row coordinate is > {int(b)} <."
+                        "\nThere is only 5 rows."
+                        "\nPlease try again:\n")
                 elif (int(b) < 1):
-                    print(Fore.RED +
-                        f"\n#########\nWrong input..\nRow number {int(b)} doesn't exist on board. \nPlease try again:\n")
+                    print(
+                        Fore.RED +
+                        "\n#########\nWrong input..\n"
+                        f"Row number {int(b)} doesn't exist on board."
+                        "\nPlease try again:\n")
                 elif (
                     computer_board.board[int(b)][a_num] == "X" or
                     computer_board.board[int(b)][a_num] == "O"
                 ):
-                    print(Fore.RED +
+                    print(
+                        Fore.RED +
                         f"\n!!! You already shot {a.upper()} {b}! "
-                        "Please choose another coordinate !!!\n"
-                    )
+                        "Please choose another coordinate !!!\n")
                 else:
                     computer_board.guess_computer_ships(a, b, computer_coords)
                     shot = False
             except ValueError:
-                print(Fore.RED +
-                "\n#########\n"
-                "Wrong input.\n"
-                "Your input should look like this --> A 1\n"
-                "Letter, space and a number.\n"
-                "Please try again..\n\n"
-                )
+                print(
+                    Fore.RED +
+                    "\n#########\n"
+                    "Wrong input.\n"
+                    "Your input should look like this --> A 1\n"
+                    "Letter, space and a number.\n"
+                    "Please try again..\n\n")
 
 
 def computer_turn():
@@ -210,36 +210,45 @@ def start_game():
 
 
 def game_over():
+    # Checks for ship_count status for player and cpu.
+    # After veryfing score displaying game result.
     if computer_board.ship_count == 0:
-        print(Fore.GREEN + Style.BRIGHT +
-        "\n__     _____ ____ _____ ___  ______   __\n"
-        "\ \   / /_ _/ ___|_   _/ _ \|  _ \ \ / /\n"
-        " \ \ / / | | |     | || | | | |_) \ V / \n"
-        "  \ V /  | | |___  | || |_| |  _ < | |  \n"
-        "   \_/  |___\____| |_| \___/|_| \_\|_|  \n \n"
-        "You won the game! Well done!\n")
+        print(
+            Fore.GREEN + Style.BRIGHT +
+            "\n__     _____ ____ _____ ___  ______   __\n"
+            "\ \   / /_ _/ ___|_   _/ _ \|  _ \ \ / /\n"
+            " \ \ / / | | |     | || | | | |_) \ V / \n"
+            "  \ V /  | | |___  | || |_| |  _ < | |  \n"
+            "   \_/  |___\____| |_| \___/|_| \_\|_|  \n \n"
+            "You won the game! Well done!\n")
 
     elif player_board.ship_count == 0:
-        print(Fore.RED + Style.BRIGHT +
-        " ____  _____ _____ _____    _  _____ \n"
-        "|  _ \| ____|  ___| ____|  / \|_   _|\n"
-        "| | | |  _| | |_  |  _|   / _ \ | |  \n"
-        "| |_| | |___|  _| | |___ / ___ \| |  \n"
-        "|____/|_____|_|   |_____/_/   \_\_|  \n"
-        "\nGame lost.. Computer shot all of your ships.\n")
+        print(
+            Fore.RED + Style.BRIGHT +
+            " ____  _____ _____ _____    _  _____ \n"
+            "|  _ \| ____|  ___| ____|  / \|_   _|\n"
+            "| | | |  _| | |_  |  _|   / _ \ | |  \n"
+            "| |_| | |___|  _| | |___ / ___ \| |  \n"
+            "|____/|_____|_|   |_____/_/   \_\_|  \n"
+            "\nGame lost.. Computer shot all of your ships.\n")
 
 
 game_on = True
 while game_on:
-
-    print(Fore.WHITE + Back.RED + Style.BRIGHT +
+    # Player name input
+    # Running all game functions and loop for game retry
+    # Keeps game function together
+    print(
+        Fore.WHITE + Back.RED + Style.BRIGHT +
         " ____    _  _____ _____ _     _____ ____  _   _ ___ ____  \n"
         "| __ )  / \|_   _|_   _| |   | ____/ ___|| | | |_ _|  _ \ \n"
         "|  _ \ / _ \ | |   | | | |   |  _| \___ \| |_| || || |_) |\n"
         "| |_) / ___ \| |   | | | |___| |___ ___) |  _  || ||  __/ \n"
-        "|____/_/   \_\_|   |_| |_____|_____|____/|_| |_|___|_|    ")
-    print(Fore.WHITE + Back.BLUE + Style.BRIGHT +
-        "==========================================================\n\n"
+        "|____/_/   \_\_|   |_| |_____|_____|____/|_| |_|___|_|    \n"
+        "==========================================================")
+    print(
+        Fore.WHITE + Back.BLUE + Style.BRIGHT +
+        "         [|    [|                                         \n"
         "    __|__ |___| |\                       v    |]         v\n"
         "    |o__| |___| | \          v               /|           \n"
         "    |___| |___| |o \             v          /o|       v   \n"
@@ -247,33 +256,37 @@ while game_on:
         "  /...\_____|___|____\_/     o--- - - =D _/___|__         \n"
         "  \   / * o * * o o  /  - - ---o        \--O--O--/        \n"
         "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    player_name = input(Fore.GREEN +
-        "\nWelcome in Battleship game!\n\nWhat is your name?\nPlease type here:\n\n")
+    player_name = input(
+        Fore.GREEN +
+        "\nWelcome in Battleship game!\n\n"
+        "What is your name?\n"
+        "Please type here:\n\n")
     player_board = Board(player_name)
     place_ships()
-    
+
     computer_board = Board("Computer")
     computer_coords = computer_board.create_five_random_coordinates()
     computer_board.display_board()
 
     start_game()
     game_over()
-
+    ###
+    # Prompt for game retry
+    ###
     retry_yn = False
     while retry_yn is False:
-        y_n = input(Fore.GREEN + 
+        y_n = input(
+            Fore.GREEN +
             "\nWould you like to play another game? "
-            "Please answer Yes or No:"
-        )
+            "Please answer Yes or No:")
         if y_n.lower().strip() == "yes" or "y":
             retry_yn = True
         elif y_n.lower().strip() == "no" or "n":
-            game_on = False    
+            game_on = False
             retry_yn = True
         else:
-            print(Fore.RED + Style.BRIGHT + 
-            "##########\n"
-            "Wrong input.\n"
-            "Please answer YES or NO.\n")
-
-
+            print(
+                Fore.RED + Style.BRIGHT +
+                "##########\n" +
+                "Wrong input.\n" +
+                "Please answer YES or NO.\n")
