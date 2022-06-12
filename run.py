@@ -211,7 +211,7 @@ def start_game():
 
 def game_over():
     if computer_board.ship_count == 0:
-        print(Front.GREEN + Style.Bright +
+        print(Fore.GREEN + Style.BRIGHT +
         "\n__     _____ ____ _____ ___  ______   __\n"
         "\ \   / /_ _/ ___|_   _/ _ \|  _ \ \ / /\n"
         " \ \ / / | | |     | || | | | |_) \ V / \n"
@@ -220,7 +220,7 @@ def game_over():
         "You won the game! Well done!\n")
 
     elif player_board.ship_count == 0:
-        print(Front.RED + Style.Bright +
+        print(Fore.RED + Style.BRIGHT +
         " ____  _____ _____ _____    _  _____ \n"
         "|  _ \| ____|  ___| ____|  / \|_   _|\n"
         "| | | |  _| | |_  |  _|   / _ \ | |  \n"
@@ -232,20 +232,21 @@ def game_over():
 game_on = True
 while game_on:
 
-    print(Fore.WHITE + Back.BLUE + Style.BRIGHT +
+    print(Fore.WHITE + Back.RED + Style.BRIGHT +
         " ____    _  _____ _____ _     _____ ____  _   _ ___ ____  \n"
         "| __ )  / \|_   _|_   _| |   | ____/ ___|| | | |_ _|  _ \ \n"
         "|  _ \ / _ \ | |   | | | |   |  _| \___ \| |_| || || |_) |\n"
         "| |_) / ___ \| |   | | | |___| |___ ___) |  _  || ||  __/ \n"
-        "|____/_/   \_\_|   |_| |_____|_____|____/|_| |_|___|_|    \n"
+        "|____/_/   \_\_|   |_| |_____|_____|____/|_| |_|___|_|    ")
+    print(Fore.WHITE + Back.BLUE + Style.BRIGHT +
         "==========================================================\n\n"
         "    __|__ |___| |\                       v    |]         v\n"
         "    |o__| |___| | \          v               /|           \n"
-        "    |___| |___| |o \             v          / |       v   \n"
-        "  _|___| |___| |__o\                       /  |           \n"
+        "    |___| |___| |o \             v          /o|       v   \n"
+        "   _|___| |___| |_o_\                      /  |           \n"
         "  /...\_____|___|____\_/     o--- - - =D _/___|__         \n"
-        "  \   o * o * * o o  /  - - ---o        \--O--O--/        \n"
-        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+        "  \   / * o * * o o  /  - - ---o        \--O--O--/        \n"
+        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     player_name = input(Fore.GREEN +
         "\nWelcome in Battleship game!\n\nWhat is your name?\nPlease type here:\n\n")
     player_board = Board(player_name)
@@ -260,22 +261,18 @@ while game_on:
 
     retry_yn = False
     while retry_yn is False:
-        y_n = input(
+        y_n = input(Fore.GREEN + 
             "\nWould you like to play another game? "
             "Please answer Yes or No:"
         )
-        if y_n.lower().strip() == "yes":
+        if y_n.lower().strip() == "yes" or "y":
             retry_yn = True
-        elif y_n.lower().strip() == "y":
-            retry_yn = True
-        elif y_n.lower().strip() == "no":
-            game_on = False    
-            retry_yn = True
-        elif y_n.lower().strip() == "n":
+        elif y_n.lower().strip() == "no" or "n":
             game_on = False    
             retry_yn = True
         else:
-            print("##########\n"
+            print(Fore.RED + Style.BRIGHT + 
+            "##########\n"
             "Wrong input.\n"
             "Please answer YES or NO.\n")
 
