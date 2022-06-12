@@ -125,7 +125,7 @@ def player_turn():
             "To make shot type: \n"
             "letter for column (A-E) and number for row (1-5) divided by a space\n"
             "Example: A 1\n"
-            "Please type here: "
+            "Please type here:\n"
         )
         if len(coordinates) > 3:
             print(
