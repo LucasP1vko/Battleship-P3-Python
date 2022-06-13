@@ -85,20 +85,41 @@ I have manually tested this project by doing the following
 
 <hr>
 
-> ## Bugs
-    -
+> ## Bugs fixed in production
+
+   <details>
+<summary>Instructions display prompt input ValueError</summary>
+<img src='ASSETS/ERRORS/error_handling_instructions_input.png' alt='Instructions display prompt input ValueError'>
+</details>
+
+<details>
+<summary>\n added after all inputs for heroku purposes</summary>
+<img src='ASSETS/ERRORS/dash_n_added_after_input_for_heroku_purposes.png' alt='\n added after all inputs for heroku purposes'>
+</details>
+
+<details>
+<summary>Error for column coordinate value input greater than column number</summary>
+<img src='ASSETS/ERRORS/error_if_b_is_greater_than_no_of_columns.png' alt='Error for column coordinate value input greater than column number'>
+</details>
+
+<details>
+<summary>PEP8 errors fixed</summary>
+<img src='ASSETS/ERRORS/pep8_errors.png' alt='PEP8 errors fixed'>
+</details>
+
 <hr>
 
-## Remaining Bugs
+> ## Remaining Bugs
     - No bugs remaining
 <hr>
 
-## Validator Testing
+> ## Validator Testing
     - PEP8
         * No errors were returned from PEP8online.com
 <hr>
 
-## Deployment 
+> ## Deployment 
+
 This project was deployed using Code Institute's mock terminal for Heroku.
 
     * Steps for deployment:
@@ -124,13 +145,17 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 <hr>
 
 
-## Deployment Link
+> ## Deployment Link
     - Heroku deploy link: https://battleship-p3-ci.herokuapp.com/
     - Github link: https://github.com/LucasP1vko/Battleship-P3-Python
 <hr>
 
-## Credits
+> ## Credits
 - 
 
 <hr>
 <hr>
+
+> ## Resources
+
+- 
