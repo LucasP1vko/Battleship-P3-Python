@@ -148,10 +148,10 @@ def player_turn():
         # Entry format validation
         coordinates = input(
             Fore.GREEN +
-            "To make shot type coordinates: \n"
-            "Column (A-E) + "
+            "To make shot type coordinates: "
+            "Column(A-E) + "
             "SPACE + "
-            "row (1-5)\n"
+            "Row(1-5)\n"
             "Example: A 1 . "
             "Please type here:\n")
         if len(coordinates) > 3:
