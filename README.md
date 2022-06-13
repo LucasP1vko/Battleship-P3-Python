@@ -51,14 +51,14 @@ CLASSIC GAME THAT ENTERTAIN EVERYONE
 
 - Automatic ships placement
 - Gameplay against computer
+- Attractive artwork at game start
+- Game fit perfectly heroku display console
 - Colorful messages and errors
 <details>
 <summary>Colorful messages and errors</summary>
 <img src='ASSETS/colors_msg.png' alt='colorful messages and errors'>
 </details>
-- Colorful messages and errors
-- Attractive artwork at game start
-- Game fit perfectly heroku display console
+
 
 ![Mockup](https://github.com/LucasP1vko/Battleship-P3-Python/blob/main/ASSETS/mockup.png)
 
