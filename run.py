@@ -39,7 +39,7 @@ class Board:
         for row in self.board:
             joint_row = "  ||  ".join(row)
             print(
-                f"{joint_row}\n")
+                f"{joint_row}")
 
     def place_ships(self, col, row):
         # displaying player ships on board
@@ -111,19 +111,19 @@ class Board:
                 print(
                     Fore.YELLOW +
                     f"\nComputer shot your ship at "
-                    f"{self.board[0][col].upper()} {row}!\n"
+                    f"{self.board[0][col].upper()} {row}!"
                     f"You have {self.ship_count} ships left..")
             elif self.ship_count == 1:
                 print(
                     Fore.YELLOW +
                     f"\nComputer shot your ship at "
-                    f"{self.board[0][col].upper()} {row}!\n"
+                    f"{self.board[0][col].upper()} {row}!"
                     f"You have last ship left..")
             else:
                 print(
                     Fore.YELLOW +
                     f"\nComputer shot your last ship at "
-                    f"{self.board[0][col].upper()} {row}!\n")
+                    f"{self.board[0][col].upper()} {row}!")
         else:
             print(
                 Fore.YELLOW +
@@ -246,7 +246,7 @@ def game_over():
             " \ \ / / | | |     | || | | | |_) \ V / \n"
             "  \ V /  | | |___  | || |_| |  _ < | |  \n"
             "   \_/  |___\____| |_| \___/|_| \_\|_|  \n \n"
-            "You won the game! Well done!\n")
+            "     You won the game! Well done!\n")
 
     elif player_board.ship_count == 0:
         print(
@@ -255,8 +255,8 @@ def game_over():
             "|  _ \| ____|  ___| ____|  / \|_   _|\n"
             "| | | |  _| | |_  |  _|   / _ \ | |  \n"
             "| |_| | |___|  _| | |___ / ___ \| |  \n"
-            "|____/|_____|_|   |_____/_/   \_\_|  \n"
-            "\nGame lost.. Computer shot all of your ships.\n")
+            "|____/|_____|_|   |_____/_/   \_\_|  \n\n"
+            "Game lost.. Computer shot all of your ships.\n")
 
 
 game_on = True
@@ -308,19 +308,19 @@ while game_on:
         if y_n.lower().strip() == "y":
             print(
                 Back.YELLOW + Fore.BLACK +
-                "              --------------------- \n"
-                "                    GET READY!      \n"
-                "             MORE SHIPS IS INCOMING!\n"
-                "              --------------------- "
+                "              ---------------------               \n"
+                "                    GET READY!                    \n"
+                "             MORE SHIPS IS INCOMING!              \n"
+                "              ---------------------               "
             )
             retry_yn = True
         elif y_n.lower().strip() == "n":
             print(
                 Back.YELLOW + Fore.BLACK +
-                "      ---------------------------------\n"
-                "      THANK YOU FOR PLAYING BATTLESHIP!\n"
-                "              COME BACK SOON           \n"
-                "      ---------------------------------"
+                "      ---------------------------------      \n"
+                "      THANK YOU FOR PLAYING BATTLESHIP!      \n"
+                "              COME BACK SOON                 \n"
+                "      ---------------------------------      "
             )
             game_on = False
             retry_yn = True
