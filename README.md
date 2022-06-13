@@ -150,8 +150,8 @@ I have manually tested this project by doing the following
 
 
 > ## Deployment Link
-    - [Heroku deployment link](https://battleship-p3-ci.herokuapp.com/)
-    - [Github link](https://github.com/LucasP1vko/Battleship-P3-Python)
+  - [Heroku deployment link](https://battleship-p3-ci.herokuapp.com/)
+  - [Github link](https://github.com/LucasP1vko/Battleship-P3-Python)
 <hr>
 
 > ## Credits
