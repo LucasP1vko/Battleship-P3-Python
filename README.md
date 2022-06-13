@@ -1,5 +1,49 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Banner with unit image and
+logo](https://github.com/LucasP1vko/Battleship-P3-Python/blob/main/ASSETS/BATTLESHIP_BANNER.gif)
 
+
+<br />
+<h1 align="center">BATTLESHIP GAME</h1>
+
+
+<div align="center">
+  <strong>PLAYER VS COMPUTER</strong>
+</div>
+<div align="center">
+CLASSIC GAME THAT ENTERTAIN EVERYONE
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Type-Game-blue" alt="type: game" />
+  <img src="https://img.shields.io/badge/Players-One-blue" alt="type: players number: 1" />
+  <img src="https://img.shields.io/badge/Purpose-Entertainment-blue" alt="about: entertainment" />
+  <img src="https://img.shields.io/badge/Languages-PYTHON3-success" alt="languages used: python" />
+
+
+  <img src="https://img.shields.io/badge/Editor-Gitpod-blueviolet" alt="editor: gitpod" />
+  <img src="https://img.shields.io/badge/Deployment-Heroku-important" alt="deployment: heroku" />
+
+
+</div>
+
+<div align="center">
+  <h3>
+    <a href="https://battleship-p3-ci.herokuapp.com/">
+      🌍Live Website
+    </a>
+    <span> | </span>
+    <a href="https://github.com/LucasP1vko/Battleship-P3-Python">
+      💾Github Repository
+    </a>
+    <span> | </span>
+    <a href="https://codeinstitute.net/ie/">
+      Code Institute
+    </a>
+  </h3>
+</div>
+<hr>
 # Battleship Game
     -
 ## How to play
