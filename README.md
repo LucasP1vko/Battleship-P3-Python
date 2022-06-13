@@ -59,10 +59,14 @@ CLASSIC GAME THAT ENTERTAIN EVERYONE
 
 <hr>
 
+![Flowchart](https://github.com/LucasP1vko/Battleship-P3-Python/blob/main/ASSETS/BATTLESHIP_GAME_PYTHON.png)
+
+<hr>
+
 ### Future Features
 
 - Allow user to select the board size and number of ships 
-- Allow user to position ships themeselves
+- Allow user to position ships themselves
 
 <hr>
 
