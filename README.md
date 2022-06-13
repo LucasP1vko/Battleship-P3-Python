@@ -44,51 +44,69 @@ CLASSIC GAME THAT ENTERTAIN EVERYONE
   </h3>
 </div>
 <hr>
-# Battleship Game
-    -
-## How to play
-    -
-## Features
-    -
 
-#### Future Features
+> ## How to play
+    - Battleship game goal is to defeat all enemy ships before the enemy will shot yours. Both: player and computer
+(enemy) ships are allocated randomly around the board.To guess enemy ships position player needs to:
+type coordinates in specific format: Letter for Column and numer for Row divided by space. Example: A 1. Board contains columns A,B,C,D,E and rows 1,2,3,4,5. First one to shot 5 of enemy ships wins the game! Good Luck!
+> ## Features
+
+- Automatic ships placement
+- Gameplay against computer
+- Colorful messages and errors
+- Attractive artwork at game start
+- Game fit perfectly heroku display console
+
+![Mockup](https://github.com/LucasP1vko/Battleship-P3-Python/blob/main/ASSETS/mockup.png)
+
+<hr>
+
+### Future Features
+
 - Allow user to select the board size and number of ships 
 - Allow user to position ships themeselves
 
+<hr>
 
-## Testing
+> ## Testing
 
 I have manually tested this project by doing the following
+
 - Passed the code through a PEP8 and confirmed that there are no problems
 - Given incorrect input: input format, out of range lenght
 - Tested in my local terminal and the code Institute Heroku Terminal
 - Family tested on their devices as well :)
 
+<hr>
 
-## Bugs
+> ## Bugs
     -
-
-### Solved Bugs
-    -
+<hr>
 
 ## Remaining Bugs
     - No bugs remaining
+<hr>
 
 ## Validator Testing
     - PEP8
         * No errors were returned from PEP8online.com
+<hr>
 
 ## Deployment 
 This project was deployed using Code Institute's mock terminal for Heroku.
 
     * Steps for deployment:
         -
+<hr>
 
 
 ## Deployment Link
     - Heroku deploy link: https://battleship-p3-ci.herokuapp.com/
     - Github link: https://github.com/LucasP1vko/Battleship-P3-Python
+<hr>
 
 ## Credits
 - 
 
+<hr>
+<hr>
