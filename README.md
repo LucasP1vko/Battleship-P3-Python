@@ -46,9 +46,7 @@ CLASSIC GAME THAT ENTERTAIN EVERYONE
 <hr>
 
 > ## How to play
-    - Battleship game goal is to defeat all enemy ships before the enemy will shot yours. Both: player and computer
-(enemy) ships are allocated randomly around the board.To guess enemy ships position player needs to:
-type coordinates in specific format: Letter for Column and numer for Row divided by space. Example: A 1. Board contains columns A,B,C,D,E and rows 1,2,3,4,5. First one to shot 5 of enemy ships wins the game! Good Luck!
+- Battleship game goal is to defeat all enemy ships before the enemy will shot yours. Both: player and computer (enemy) ships are allocated randomly around the board.To guess enemy ships position player needs to: type coordinates in specific format: Letter for Column and numer for Row divided by space. Example: A 1. Board contains columns A,B,C,D,E and rows 1,2,3,4,5. First one to shot 5 of enemy ships wins the game! Good Luck!
 > ## Features
 
 - Automatic ships placement
