@@ -258,6 +258,7 @@ def game_over():
             "|____/|_____|_|   |_____/_/   \_\_|  \n\n"
             "Game lost.. Computer shot all of your ships.\n")
 
+
 def instructions():
     instructions_prompt = True
     while instructions_prompt is True:
@@ -294,7 +295,7 @@ def instructions():
                 "\n#########\n"
                 "Wrong input.\n"
                 "Please answer 1 or 2.\n")
-            continue        
+            continue
         else:
             print(
                 Fore.RED + Style.BRIGHT +
