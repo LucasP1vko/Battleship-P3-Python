@@ -150,8 +150,8 @@ def player_turn():
             Fore.GREEN +
             "To make shot type coordinates: \n"
             "Column (A-E) + "
-            "space + "
-            "row (1-5)"
+            "SPACE + "
+            "row (1-5)\n"
             "Example: A 1 . "
             "Please type here:\n")
         if len(coordinates) > 3:
