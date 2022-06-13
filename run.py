@@ -2,9 +2,13 @@ import random
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
+# importing modules:
+# random - for generating random coordinates and
+# colorama - for displaying colors in terminal
 
 
 class Board:
+    # contain board matrix, ship count and coordinates list
 
     def __init__(self, name):
         self.name = name
@@ -22,6 +26,7 @@ class Board:
         ]
 
     def column_number(self, col):
+        # list of column indexes
 
         return self.board[0].index(col.upper())
 
@@ -37,6 +42,7 @@ class Board:
                 f"{joint_row}\n")
 
     def place_ships(self, col, row):
+        # displaying player ships on board
 
         if type(col) is str:
             col_num = self.column_number(col)
@@ -45,6 +51,7 @@ class Board:
         self.board[int(row)][col_num] = "S"
 
     def create_five_random_coordinates(self):
+        # create 5 random coordinates
 
         col_list = ["A", "B", "C", "D", "E"]
         row_list = [1, 2, 3, 4, 5]
@@ -63,7 +70,10 @@ class Board:
         return coordinate_list
 
     def guess_computer_ships(self, col, row, coor_list):
-
+        # removing coords from list if hit
+        # marking board hit or miss
+        # updating computer ship count if hit
+        # displaying messages
         col_num = self.column_number(col)
         coords = [int(row), col_num]
         if coords in coor_list:
@@ -83,6 +93,11 @@ class Board:
             self.board[int(row)][col_num] = "O"
 
     def guess_player_ships(self, player_name):
+        # create random coordinates
+        # update coord list if hit
+        # Marking board if hit / miss
+        # Updating player ship count if hit
+        # Display messages
         i = len(self.coordinates_list)
         rand_index = random.randrange(i)
         rand_coordinate = self.coordinates_list[rand_index]
@@ -129,6 +144,8 @@ def place_ships():
 def player_turn():
     shot = True
     while shot:
+        # Coordinations entry
+        # Entry format validation
         coordinates = input(
             Fore.GREEN +
             "To make shot type coordinates: \n"
@@ -157,6 +174,8 @@ def player_turn():
             continue
         else:
             try:
+                # split entry and use as row and column
+                # validate if row is in range
                 a, b = coordinates.split()
                 a_num = computer_board.column_number(a)
                 if (int(b) > 5):
@@ -173,6 +192,8 @@ def player_turn():
                         f"Row number {int(b)} doesn't exist on board."
                         "\nPlease try again:\n")
                 elif (
+                    # Check if coordinates are already marked
+                    # Display error if yes
                     computer_board.board[int(b)][a_num] == "X" or
                     computer_board.board[int(b)][a_num] == "O"
                 ):
@@ -184,6 +205,7 @@ def player_turn():
                     computer_board.guess_computer_ships(a, b, computer_coords)
                     shot = False
             except ValueError:
+                # handle column incorrect format error
                 print(
                     Fore.RED +
                     "\n#########\n"
@@ -198,6 +220,10 @@ def computer_turn():
 
 
 def start_game():
+    # Checking score
+    # Running turns for player and computer
+    # Displaying boards
+    # If ship_count = 0 break to skip to game_over
     while computer_board.ship_count > 0 and player_board.ship_count > 0:
         player_turn()
         if computer_board.ship_count == 0 or player_board.ship_count == 0:
@@ -279,9 +305,23 @@ while game_on:
             Fore.GREEN +
             "\nWould you like to play another game? "
             "Please answer Yes or No:")
-        if y_n.lower().strip() == "yes" or "y":
+        if y_n.lower().strip() == "y":
+            print(
+                Back.YELLOW + Fore.BLACK +
+                "              --------------------- \n"
+                "                    GET READY!      \n"
+                "             MORE SHIPS IS INCOMING!\n"
+                "              --------------------- "
+            )
             retry_yn = True
-        elif y_n.lower().strip() == "no" or "n":
+        elif y_n.lower().strip() == "n":
+            print(
+                Back.YELLOW + Fore.BLACK +
+                "      ---------------------------------\n"
+                "      THANK YOU FOR PLAYING BATTLESHIP!\n"
+                "              COME BACK SOON           \n"
+                "      ---------------------------------"
+            )
             game_on = False
             retry_yn = True
         else:
