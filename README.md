@@ -53,7 +53,6 @@ CLASSIC GAME THAT ENTERTAIN EVERYONE
 - Gameplay against computer
 - Attractive artwork at game start
 - Game fit perfectly heroku display console
-- Colorful messages and errors
 <details>
 <summary>Colorful messages and errors</summary>
 <img src='ASSETS/colors_msg.png' alt='colorful messages and errors'>
@@ -103,7 +102,25 @@ I have manually tested this project by doing the following
 This project was deployed using Code Institute's mock terminal for Heroku.
 
     * Steps for deployment:
-        -
+        In Gitpod:
+        - Used PIP3 Freeze > to populate REQUIREMENTS.txt file with imported modules for heroku,
+
+        On Heroku website:
+        - Create account on www.heroku.com,
+        - Create New App,
+        - Choose unique name and region(Europe),
+
+        In Deploy tab:
+        - Connected to GitHub to find and connect to my project,
+        - Deployed main branch,
+        - Enabled automatic deployment,
+
+        In Settings tab:
+        - In Config Vars added Key:PORT Value:6000
+        - In Buildpack added NodeJS and Python
+        
+        READY
+
 <hr>
 
 
