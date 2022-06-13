@@ -111,13 +111,13 @@ class Board:
                 print(
                     Fore.YELLOW +
                     f"\nComputer shot your ship at "
-                    f"{self.board[0][col].upper()} {row}!"
+                    f"{self.board[0][col].upper()} {row}! "
                     f"You have {self.ship_count} ships left..")
             elif self.ship_count == 1:
                 print(
                     Fore.YELLOW +
                     f"\nComputer shot your ship at "
-                    f"{self.board[0][col].upper()} {row}!"
+                    f"{self.board[0][col].upper()} {row}! "
                     f"You have last ship left..")
             else:
                 print(
@@ -127,8 +127,8 @@ class Board:
         else:
             print(
                 Fore.YELLOW +
-                "\n Computer shot at "
-                f"{self.board[0][col].upper()} {row} was missed.."
+                "\nComputer shot at "
+                f"{self.board[0][col].upper()} {row} was missed.. "
                 f"You have {self.ship_count} ships left..")
             self.board[row][col] = "O"
 
@@ -149,10 +149,10 @@ def player_turn():
         coordinates = input(
             Fore.GREEN +
             "To make shot type coordinates: \n"
-            "Letter for column (A-E) + "
-            "number for row (1-5) "
-            "divided by a space\n"
-            "Example: A 1\n"
+            "Column (A-E) + "
+            "space + "
+            "row (1-5)"
+            "Example: A 1 . "
             "Please type here:\n")
         if len(coordinates) > 3:
             print(
