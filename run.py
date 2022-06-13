@@ -266,7 +266,7 @@ def instructions():
             "\nWelcome in Battleship Game.\n"
             "To read game instructions press: 1.\n"
             "To play game press: 2.\n")
-        if int(instructions_yn) == 1:
+        if instructions_yn == "1":
             print(
                 Back.YELLOW + Fore.BLACK +
                 "Battleship game goal is to defeat all enemy\n"
@@ -281,14 +281,20 @@ def instructions():
                 "First one to shot 5 of enemy ships wins the game!"
                 "Good Luck!"
             )
-        elif int(instructions_yn) == 2:
+        elif instructions_yn == "2":
             print(
                 Back.YELLOW + Fore.BLACK +
                 ">>>>>>>>>>>>>>> Let's Go! <<<<<<<<<<<<<<<<<"
 
             )
             instructions_prompt = False
-
+        elif len(instructions_yn) > 1:
+            print(
+                Fore.RED + Style.BRIGHT +
+                "\n#########\n"
+                "Wrong input.\n"
+                "Please answer 1 or 2.\n")
+            continue        
         else:
             print(
                 Fore.RED + Style.BRIGHT +
