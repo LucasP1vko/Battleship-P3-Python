@@ -168,6 +168,7 @@ I have manually tested this project by doing the following
 <br>
 <div align="center">
 <b>THANK YOU ALL!😃👍</b>
+</div>
 <hr>
 <hr>
 
