@@ -258,6 +258,43 @@ def game_over():
             "|____/|_____|_|   |_____/_/   \_\_|  \n\n"
             "Game lost.. Computer shot all of your ships.\n")
 
+def instructions():
+    instructions_prompt = True
+    while instructions_prompt is True:
+        instructions_yn = input(
+            Fore.GREEN +
+            "\nWelcome in Battleship Game.\n"
+            "To read game instructions press: 1.\n"
+            "To play game press: 2.\n")
+        if int(instructions_yn) == 1:
+            print(
+                Back.YELLOW + Fore.BLACK +
+                "Battleship game goal is to defeat all enemy\n"
+                "ships before enemy will shot yours.\n"
+                "Both: player and computer (enemy) ships\n"
+                "are allocated randomly around the board.\n"
+                "To guess enemy ships position player needs to:\n"
+                "type coordinates in specific format:\n"
+                "Letter for Column and numer for Row divided by space.\n"
+                "Example: A 1.\n"
+                "Board contains columns A,B,C,D,E and rows 1,2,3,4,5.\n"
+                "First one to shot 5 of enemy ships wins the game!"
+                "Good Luck!"
+            )
+        elif int(instructions_yn) == 2:
+            print(
+                Back.YELLOW + Fore.BLACK +
+                ">>>>>>>>>>>>>>> Let's Go! <<<<<<<<<<<<<<<<<"
+
+            )
+            instructions_prompt = False
+
+        else:
+            print(
+                Fore.RED + Style.BRIGHT +
+                "##########\n" +
+                "Wrong input.\n" +
+                "Please answer 1 or 2.\n")
 
 game_on = True
 while game_on:
@@ -282,6 +319,7 @@ while game_on:
         "  /...\_____|___|____\_/     o--- - - =D _/___|__         \n"
         "  \   / * o * * o o  /  - - ---o        \--O--O--/        \n"
         "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    instructions()
     player_name = input(
         Fore.GREEN +
         "\nWelcome in Battleship game!\n\n"
@@ -304,7 +342,7 @@ while game_on:
         y_n = input(
             Fore.GREEN +
             "\nWould you like to play another game? "
-            "Please answer Yes or No:")
+            "Please answer Yes or No:\n")
         if y_n.lower().strip() == "y":
             print(
                 Back.YELLOW + Fore.BLACK +
