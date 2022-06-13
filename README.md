@@ -1,31 +1,50 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Lucas P1,
+# Battleship Game
+    -
+## How to play
+    -
+## Features
+    -
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+#### Future Features
+- Allow user to select the board size and number of ships 
+- Allow user to position ships themeselves
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Testing
 
-## Creating the Heroku app
+I have manually tested this project by doing the following
+- Passed the code through a PEP8 and confirmed that there are no problems
+- Given incorrect input: input format, out of range lenght
+- Tested in my local terminal and the code Institute Heroku Terminal
+- Family tested on their devices as well :)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Bugs
+    -
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Solved Bugs
+    -
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Remaining Bugs
+    - No bugs remaining
 
-Connect your GitHub repository and deploy as normal.
+## Validator Testing
+    - PEP8
+        * No errors were returned from PEP8online.com
 
-## Constraints
+## Deployment 
+This project was deployed using Code Institute's mock terminal for Heroku.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+    * Steps for deployment:
+        -
 
------
-Happy coding!
+
+## Deployment Link
+    - Heroku deploy link: https://battleship-p3-ci.herokuapp.com/
+    - Github link: https://github.com/LucasP1vko/Battleship-P3-Python
+
+## Credits
+- 
+
