@@ -160,7 +160,7 @@ I have manually tested this project by doing the following
 - In [How To Print Colored Text in Python (Colorama Tutorial)
 ](https://www.youtube.com/watch?v=u51Zjlnui4Y) video from [Tech With Tim
 ](https://www.youtube.com/c/TechWithTim) channel and his [GitHub page](https://github.com/techwithtim/ColoredTextInPython/blob/main/tutorial.py) I learned how to implement Colorama to my project,
-- Big credit for [Damianjacob](https://github.com/Damianjacob) I learned a lot from his [project](https://github.com/Damianjacob/MS3-Battleship-Game) and got many solutions from it when got stuck.
+- Big credit for [Damianjacob](https://github.com/Damianjacob) I learned a lot from his [project](https://github.com/Damianjacob/MS3-Battleship-Game) also reproduced part of his code and used in my with modifications and also got many solutions from it when got stuck.
 - Biggest support to my work on this project was [Code Institute](https://codeinstitute.net/ie/) where I learned how to use Python.
 - Also content from [Grepper](https://www.codegrepper.com/), [PYnative](https://pynative.com/),[Stack Overflow](https://stackoverflow.com/) and [W3schools](https://www.w3schools.com/) and of course [Google](https://www.google.com/) was great support.
 - YouTube tutorial [Python OOP Tutorial 1: Classes and Instances
