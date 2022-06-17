@@ -8,6 +8,10 @@ colorama.init(autoreset=True)
 
 
 class Board:
+    # this class and following functions, before modification, 
+    # was reproduced and inspired from Damianjacob project 
+    # and credit is also referenced in readme file
+    # -----------------------------------------------------
     # contain board matrix, ship count and coordinates list
 
     def __init__(self, name):
@@ -31,6 +35,7 @@ class Board:
         return self.board[0].index(col.upper())
 
     def display_board(self):
+        # printing board matrix
         print(
             Fore.CYAN +
             "------------------------------------\n"
@@ -134,6 +139,7 @@ class Board:
 
 
 def place_ships():
+    # uses random coordinates list to populate boards with ships
     coordinates = player_board.create_five_random_coordinates()
     for coor in coordinates:
         a, b = coor
@@ -260,6 +266,8 @@ def game_over():
 
 
 def instructions():
+    # asking user to choose between start game and displaying game instructions
+    # validate input
     instructions_prompt = True
     while instructions_prompt is True:
         instructions_yn = input(
