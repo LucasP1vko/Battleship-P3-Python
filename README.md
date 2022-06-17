@@ -165,6 +165,8 @@ I have manually tested this project by doing the following
 - Also content from [Grepper](https://www.codegrepper.com/), [PYnative](https://pynative.com/),[Stack Overflow](https://stackoverflow.com/) and [W3schools](https://www.w3schools.com/) and of course [Google](https://www.google.com/) was great support.
 - YouTube tutorial [Python OOP Tutorial 1: Classes and Instances
 ](https://www.youtube.com/watch?v=ZDa-Z5JzLYM&list=PLdCHlqeB2-az93nC_gErumI75AvTA0l74&index=12) from CoreySchaffer channel helped me to look from different approach at classes.
+- Thanks to Kasia B. - my cohort facilitator for supporting me and giving me confidence boost during building this project.
+
 <br>
 <div align="center">
 <b>THANK YOU ALL!😃👍</b>
